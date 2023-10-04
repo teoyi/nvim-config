@@ -2,10 +2,15 @@
 vim.keymap.set('n', '<space>q', ':q<CR>', { noremap = true })
 vim.keymap.set('n', '|', ':vsplit<CR>', { noremap = true })
 vim.keymap.set('n', '\\', ':split<CR>', { noremap = true })
+-- -- buffers 
 vim.keymap.set('n', '<leader>c', ':bd<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>C', ':bd!<CR>', { noremap = true })
 vim.keymap.set('n', '<leader>bC', ':bufdo bd<CR>', { noremap = true })
-
+-- -- splits 
+vim.keymap.set("n", "<C-h>", "<C-w>h", { noremap = true })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { noremap = true })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { noremap = true })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true })
 -- Insert Mode 
 vim.keymap.set('i', 'jj', '<Esc>', { noremap = true })
 
