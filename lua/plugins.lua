@@ -139,11 +139,7 @@ return {
 	-- Editting Supports
 	{
 		"numToStr/Comment.nvim",
-		opts = {
-			toggler = {
-				line = "<leader>/",
-			},
-		},
+		opts = {},
 		lazy = false,
 	},
 	{
@@ -151,5 +147,11 @@ return {
 		config = function()
 			require("auto-save").setup({})
 		end,
+	},
+	-- Terminals
+	{
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		config = true,
 	},
 }

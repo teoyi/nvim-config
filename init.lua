@@ -1,3 +1,3 @@
-require "options"
-require "pm"
-require "mappings"
+require("options")
+require("pm")
+require("mappings")
