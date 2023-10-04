@@ -1,10 +1,10 @@
 return {
 	-- UI
 	{
-		"rebelot/kanagawa.nvim",
+		"folke/tokyonight.nvim",
 		priority = 1000,
 		config = function()
-			vim.cmd("colorscheme kanagawa")
+			vim.cmd("colorscheme tokyonight-night")
 		end,
 	},
 	{
