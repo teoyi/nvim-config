@@ -64,6 +64,7 @@ return {
 					graphql = { "prettierd" },
 					lua = { "stylua" },
 					python = { "isort", "black" },
+					go = { "goimports" },
 				},
 				format_on_save = {
 					lsp_fallback = true,
@@ -96,6 +97,7 @@ return {
 				typescriptreact = { "eslint_d" },
 				svelte = { "eslint_d" },
 				python = { "pylint" },
+				go = { "golangcilint" },
 			}
 
 			local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
