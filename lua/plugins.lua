@@ -114,6 +114,10 @@ return {
 			end, { desc = "Trigger linting for current file" })
 		end,
 	},
+	{
+		"goolord/alpha-nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
 	-- File
 	{
 		"nvim-telescope/telescope.nvim",
