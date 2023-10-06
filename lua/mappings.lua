@@ -22,6 +22,7 @@ vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 vim.keymap.set("n", "gd", ":Telescope lsp_definitions<CR>", {})
 vim.keymap.set("n", "<leader>e", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { noremap = true })
+vim.keymap.set("n", "K", ":lua vim.lsp.buf.hover()<CR>", {})
 -- vim.keymap.set("n", "<leader>e", ":E<CR>", { noremap = true })
 
 -- LazyGit
