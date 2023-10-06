@@ -1,9 +1,11 @@
-local status_ok, alpha = pcall(require, "alpha")
-if not status_ok then
-	return
-end
-
+local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
+local section = dashboard.section
+local fn = vim.fn
+local config = dashboard.config
+local marginTopPercent = 0.3
+local headerPadding = fn.max({ 2, fn.floor(fn.winheight(0) * marginTopPercent) })
+
 dashboard.section.header.val = {
 	[[　　　 　　/＾>》, -―‐‐＜＾}]],
 	[[　　　 　./:::/,≠´::::::ヽ.]],
@@ -35,12 +37,15 @@ dashboard.section.footer.opts.hl = "Type"
 dashboard.section.header.opts.hl = "Include"
 dashboard.section.buttons.opts.hl = "Keyword"
 
-dashboard.opts.opts.noautocmd = true
-dashboard.config.layout({
-	{ type = "padding", val = vim.fn.max({ 2, vim.fn.floor(vim.fn.winheight(0) * 0.3) }) },
-	dashboard.section.header,
+-- dashboard.opts.opts.noautocmd = true
+-- alpha.setup(dashboard.opts)
+
+config.layout = {
+	{ type = "padding", val = headerPadding },
+	section.header,
 	{ type = "padding", val = 2 },
-	dashboard.section.buttons,
-	dashboard.section.footer,
-})
-alpha.setup(dashboard.config)
+	section.buttons,
+	section.footer,
+}
+
+alpha.setup(config)
