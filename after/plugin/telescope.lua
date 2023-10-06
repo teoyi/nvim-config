@@ -61,7 +61,7 @@ require('telescope').setup({
 			theme = "dropdown",
 			hijack_netrw = true,
 			hidden = true,
-			previewer = false,
+			previewer = true,
 		},
   	}
 })

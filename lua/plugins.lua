@@ -150,6 +150,11 @@ return {
 			require("auto-save").setup({})
 		end,
 	},
+	{
+		"smoka7/hop.nvim",
+		version = "*",
+		opts = {},
+	},
 	-- Terminals
 	{
 		"akinsho/toggleterm.nvim",

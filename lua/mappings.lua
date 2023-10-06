@@ -20,8 +20,12 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
--- vim.keymap.set('n', '<leader>e', ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { noremap = true })
-vim.keymap.set("n", "<leader>e", ":E<CR>", { noremap = true })
+vim.keymap.set("n", "gd", ":Telescope lsp_definitions<CR>", {})
+vim.keymap.set("n", "<leader>e", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { noremap = true })
+-- vim.keymap.set("n", "<leader>e", ":E<CR>", { noremap = true })
 
 -- LazyGit
 vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { noremap = true })
+
+-- Hope
+vim.keymap.set("n", "s", ":HopWord<CR>", { noremap = true })
