@@ -25,6 +25,12 @@ return {
 			vim.notify = require("notify")
 		end,
 	},
+	{
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup()
+		end,
+	},
 	-- LSP/CMP
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
@@ -159,10 +165,23 @@ return {
 		version = "*",
 		opts = {},
 	},
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {},
+	},
 	-- Terminals
 	{
 		"akinsho/toggleterm.nvim",
 		version = "*",
 		config = true,
+	},
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		main = "ibl",
+		opts = {},
+		config = function()
+			require("ibl").setup({})
+		end,
 	},
 }
